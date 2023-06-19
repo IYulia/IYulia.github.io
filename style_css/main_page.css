@@ -113,6 +113,170 @@ a {
   text-decoration: none;
 }
 
+.section_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.section_3 .section_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+.section_3 .section_top h1 {
+  color: #3a3a3a;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 500;
+  font-size: 43px;
+  padding-bottom: 20px;
+}
+.section_3 .section_top p {
+  color: #3a3a3a;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section_3 .section_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+}
+.section_3 .section_bottom .section_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.section_3 .section_bottom .section_left .section_left_img {
+  width: 554px;
+  height: 397px;
+  border-radius: 5px;
+  background-image: url(/image/canada-ontario-niagara-falls-2\ 1.png);
+}
+.section_3 .section_bottom .section_left .section_left_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.section_3 .section_bottom .section_left .section_left_text h1 {
+  font-weight: 500;
+  color: #3a3a3a;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 19px;
+}
+.section_3 .section_bottom .section_left .section_left_text p {
+  width: 470px;
+  color: #3a3a3a;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+.section_3 .section_bottom .section_left .section_left_text a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  color: #3a3a3a;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Readex Pro", sans-serif;
+}
+.section_3 .section_bottom .section_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+.section_3 .section_bottom .section_right .section_right_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 27px;
+}
+.section_3 .section_bottom .section_right .section_right_card .card_img {
+  width: 263px;
+  height: 201px;
+  border-radius: 5px;
+}
+.section_3 .section_bottom .section_right .section_right_card .card_text {
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.section_3 .section_bottom .section_right .section_right_card .card_text h1 {
+  font-weight: 500;
+  color: #3a3a3a;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 19px;
+  width: 226px;
+  height: 30px;
+}
+.section_3 .section_bottom .section_right .section_right_card .card_text p {
+  width: 243px;
+  height: 60px;
+  color: #3a3a3a;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section_3 .section_bottom .section_right .section_right_card .card_text a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  color: #3a3a3a;
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Readex Pro", sans-serif;
+}
+
 .footer {
   width: 100%;
   height: 280px;
