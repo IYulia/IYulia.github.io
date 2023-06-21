@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link rel="stylesheet" href="/style_css/main_page_style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    .offers__slider {
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .swiper-slide {
+      width: calc(100% / 3);
+      margin-right: 5px;
+    }
+    .swiper-slide:last-child {
+      margin-right: 0;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="offers__slider swiper-container">
+    <div class="swiper-wrapper">
+        <div class="offers__slider__item swiper-slide">
+          <img class="offers__slider__img" src="/images/slider-3.jpg" alt="">
+          <h3 class="offers__slider__title">Dizin</h3>
+          <ul class="slider__list">
+              <li class="slider__list__item-bg">
+                  Iran
+                  <span>4.6</span>
+              </li>
+              <li class="slider__list__item-day">5 Day 6 Nights</li>
+              <li class="slider__list__item-price"><b>550/</b>$person</li>
+          </ul>
+        </div>
+        <div class="offers__slider__item swiper-slide">
+          <img class="offers__slider__img" src="/images/slider-4.jpg" alt="">
+                      <h3 class="offers__slider__title">Sajek Valley</h3>
+                      <ul class="slider__list">
+                          <li class="slider__list__item-bg">
+                              Bangladesh
+                              <span>4.7</span>
+                          </li>
+                          <li class="slider__list__item-day">3 Day 4 Nights</li>
+                          <li class="slider__list__item-price"><b>$400/</b>person</li>
+                      </ul>
+        </div>
+        <div class="offers__slider__item swiper-slide">
+          <img class="offers__slider__img" src="/images/slider-5.jpg" alt="">
+          <h3 class="offers__slider__title">Osaka Castle</h3>
+          <ul class="slider__list">
+              <li class="slider__list__item-bg">
+                  Japan
+                  <span>4.7</span>
+              </li>
+              <li class="slider__list__item-day">4 Day 5 Nights</li>
+              <li class="slider__list__item-price"><b>$700/</b>person</li>
+          </ul>
+        </div>
+        <div class="offers__slider__item swiper-slide">
+          <img class="offers__slider__img" src="/images/slider-1.jpg" alt="">
+          <h3 class="offers__slider__title">Statue of Liberty.</h3>
+          <ul class="slider__list">
+              <li class="slider__list__item-bg">
+                  New York
+                  <span>4.8</span>
+              </li>
+              <li class="slider__list__item-day">4 Day 5 Nights</li>
+              <li class="slider__list__item-price"><b>$450/</b>person</li>
+          </ul>
+            </div>
+            <div class="offers__slider__item swiper-slide">
+              <img class="offers__slider__img" src="/images/slider-2.jpg" alt="">
+              <h3 class="offers__slider__title">The Great Wall</h3>
+              <ul class="slider__list">
+                  <li class="slider__list__item-bg">
+                      China
+                      <span>4.9</span>
+                  </li>
+                  <li class="slider__list__item-day">7 Day 8 Nights</li>
+                  <li class="slider__list__item-price"><b>$850/</b>person</li>
+              </ul>
+                </div>
+      </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var swiper = new Swiper('.offers__slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 5,
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+  </script>
+</body>
+</html>
