@@ -180,6 +180,10 @@ body {
   padding-bottom: 30px;
 }
 
+.logo__img {
+  width: 190px;
+}
+
 .header__top_ff {
   background: linear-gradient(to right, rgba(25, 30, 93, 0.3725490196), rgba(96, 96, 96, 0.3725490196));
 }
@@ -425,6 +429,7 @@ body {
 
 .logo__footer {
   margin-bottom: 40px;
+  width: 250px;
 }
 
 .foooter__contacts__title {
