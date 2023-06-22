@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style_css/login_page_style.css">
+    <title>Login</title>
+</head>
+<body>
+    <header class="header" style="background-image: url(/images/header__bg.jpg);">
+        <div class="header__top_ff">
+          <div class="header__top">
+            <a class="logo" href="/html/main_page.html"><img class="logo__img" src="/images/logo.svg" alt=""></a>
+            <nav class="menu">
+              <button class="menu__btn">
+                <span></span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__list__item"><a class="menu__list__link" href="/html/main_page.html">Home</a></li>
+                <li class="menu__list__item"><a class="menu__list__link" href="/html/weather_page.html">Weather</a></li>
+                <li class="menu__list__item"><a class="menu__list__link" href="#">Location</a></li>
+                <li class="menu__list__item"><a class="menu__list__link" href="#">About</a></li>
+                <li class="menu__list__item"><a class="menu__list__link" href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <a class="header__top__btn" href="#">Login & Booking</a>
+          </div>
+        </div>
+        <section class="login_form">
+            <div class="container">
+                <div id="LoginAndRegistrationForm">
+                    <h1 id="formTitle">Login</h1>
+                    <div id="formSwitchBtn">
+                        <button onclick="ShowLoginForm()"  id="ShowLoginBtn" class="active">Login</button>
+                        <button onclick="ShowRegistrationForm()"  id="ShowRegistrationBtn">Registration</button>
+                    </div>
+                    <div id="LoginFrom">
+                        <form action="#">
+                            <div class="center">
+                                <input id="LoginEmail" class="input-text" type="text" placeholder="Email Address"> 
+                                <input id="LoginPassword" class="mt-10 input-text" type="password" placeholder="Password">
+                            </div>
+                            
+                            <div class="forgot-pass-remember-me mt-10">
+                                <div class="forgot-pass">
+                                    <a id="ForgotPassword" href="JavaScript:void(0);" onclick="ShowForgotPasswordForm()" >Forgot Password?</a>
+                                </div>
+                                <div class="remember-me">
+                                    <input id="rememberMe" type="checkbox">
+                                    <label for="rememberMe">Remember Me</label>
+                                </div>
+                            </div>
+        
+                            <div class="center mt-20">
+                                <input onclick="return ValidateLoginForm();"  class="Submit-Btn" type="submit" value="Login" id="LoginBtn">
+                            </div>
+                        </form>
+                        <p class="center mt-20 dont-have-account">
+                            Don't have an account ? 
+                            <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration now</a>
+                        </p>
+                    </div>
+                    <div id="RegistrationFrom">
+                        <form action="#">
+                            <div class="center">
+                                <input id="RegiName" class="input-text" type="text" placeholder="Full Name">
+                                <input id="RegiEmailAddres" class="input-text mt-10" type="email" placeholder="Email Address">
+                                <input id="RegiPassword" class="mt-10 input-text" type="password" placeholder="Password">
+                                <input id="RegiConfirmPassword" class="mt-10 input-text" type="password" placeholder="Confirm Password">
+                            </div>
+                            <div class="center mt-20">
+                                <input onclick="return ValidateRegistrationForm();" class="Submit-Btn" type="submit" value="Registration" id="RegistrationitBtn">
+                            </div>
+                        </form>
+                        <p class="center mt-20 already-have-account">
+                            Already have an account ? 
+                            <a href="#" onclick="ShowLoginForm()">Login now</a>
+                        </p>
+                    </div>
+                    <div id="ForgotPasswordForm">
+                        <form action="">
+                            <div class="center mt-20">
+                                <input class="input-text " type="email" id="forgotPassEmail" placeholder="Email Address">
+                            </div>
+                            <div class="center mt-20">
+                                <input onclick="return ValidateForgotPasswordForm();" class="Submit-Btn" type="submit" value="Reset Password" id="PasswordResetBtn" >
+                            </div>
+                        </form>
+                        <p class="center mt-20 already-have-account">
+                            Back to the 
+                            <a href="JavaScript:void(0);" onclick="ShowLoginForm()">Login page</a> | <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration page</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+<!--  -->
+<!--  -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__contacts">
+          <img class="logo__footer" src="/images/Black_logo.svg" alt="">
+          <h4 class="foooter__contacts__title">Contact us</h4>
+          <a class="footer__contactl__email" href="mailto:weatherine@gmail.com">weatherine@gmail.com</a>
+          <div class="footer__social">
+            <a class="footer___social__link" href=""><img src="/images/facebook-app-symbol.png" alt=""></a>
+            <a class="footer___social__link" href=""><img src="/images/instagram.png" alt=""></a>
+            <a class="footer___social__link" href=""><img src="/images/twitter.png" alt=""></a>
+            <a class="footer___social__link" href=""><img src="/images/telegram.png" alt=""></a>
+          </div>
+        </div>
+        <ul class="footer__list">
+          <li class="footer__list__item"><a class="footer__list__link" href="#">Services</a></li>
+          <li class="footer__list__item"><a class="footer__list__link" href="#">About</a></li>
+          <li class="footer__list__item"><a class="footer__list__link" href="#">Our story</a></li>
+          <li class="footer__list__item"><a class="footer__list__link" href="#">Benefits</a></li>
+          <li class="footer__list__item"><a class="footer__list__link" href="#">Branding</a></li>
+        </ul>
+        <ul class="footer__info">
+          <li class="footer__info__item"><a class="footer__info__link" href="#">Legal</a></li>
+          <li class="footer__info__item"><a class="footer__info__link" href="#">Terms &amp; Conditions</a></li>
+          <li class="footer__info__item"><a class="footer__info__link" href="#">Privecy Policy</a></li>
+          <li class="footer__info__item"><a class="footer__info__link" href="#">Terms of use</a></li>
+        </ul>
+        <form class="footer__form">
+          <h4 class="footer__form__title"><b>SUBSCRIBE NOW</b></h4>
+          <div class="ff">
+            <input class="footer__input" type="text" placeholder="Email">
+            <button class="form__button">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="/scripts/login-page_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+p,
+img,
+b,
+ul,
+li,
+form,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+input {
+  vertical-align: middle;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.title {
+  font-weight: 500;
+  font-size: 43px;
+  line-height: 140%;
+  text-align: center;
+  font-family: "Gelasio", serif;
+  margin-bottom: 20px;
+}
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  background-color: #fff;
+  color: #000;
+}
+.header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  height: 100vh;
+  color: #fff;
+}
+.header__top {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+}
+.logo__img{
+  width: 190px;
+}
+.header__top_ff{
+  background: linear-gradient(to right, #191e5d5f, #6060605f);
+}
+.menu__list {
+  display: flex;
+}
+.menu__list__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0 25px;
+}
+.menu__list__link:hover {
+  color: #c9453b;
+}
+.header__top__btn {
+  padding: 14px 35px 13px;
+  background-color: #c9453b;
+  border-radius: 5px;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 120%;
+  font-family: "Gelasio", serif;
+  margin-bottom: 30px;
+  max-width: 804px;
+}
+.header__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  margin-bottom: 40px;
+  max-width: 458px;
+}
+.header__btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 18px 46px 17px;
+  background-color: #c9453b;
+  border-radius: 5px;
+}
+
+
+// SECTION
+
+.login_form{
+    height: 100%;
+    margin-top: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+/*font-family: 'Nunito Sans', sans-serif;*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.center{
+	text-align: center;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.mt-20{
+	margin-top: 20px;
+}
+
+#LoginAndRegistrationForm{
+	width: 350px;
+	background: #fff;
+	margin: 100px auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 15px;
+	transform: scale(1.2);
+	box-shadow: 0px 0px 6px 0px #cdcdcd;
+}
+
+#formTitle{
+	text-align: center;
+	padding-top: 10px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	font-size: 25px;
+    color: #c9453b;
+}
+
+#formSwitchBtn{
+	display: flex;
+	justify-content: center;
+	padding: 20px 0px;
+}
+#formSwitchBtn button{
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: bolder;
+	width: 160px;
+	height: 40px;
+	border: 0px;
+	cursor: pointer;
+	position: relative;
+	background: transparent;
+	border: 1px solid #c9453b;
+	transition: 0.4s;
+}
+#formSwitchBtn .active{
+	color: #fff;
+	background: #c9453b;
+}
+.input-text{
+	width: 100%;
+	height: 38px;
+	border: 0px;
+	border: 1px solid #c9453b;
+	box-sizing: border-box;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 17px;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.input-text:focus{
+	outline: none;
+}
+
+.forgot-pass-remember-me{
+	display: flex;
+	justify-content: center;
+	gap: 90px;
+	font-size: 14px;
+}
+
+.forgot-pass-remember-me #ForgotPassword{
+	color: #002b27;
+	font-weight: bold;
+	transition: 0.4s;
+}
+.forgot-pass-remember-me #ForgotPassword:hover{
+	color: #008d7f;
+}
+
+.forgot-pass-remember-me input{
+	height: 12px;
+}
+.forgot-pass-remember-me label{
+	font-family: 'Nunito Sans', sans-serif;
+}
+.forgot-pass-remember-me a{
+	text-decoration: none;
+	font-family: 'Nunito Sans', sans-serif;
+	font-style: italic;
+}
+.Submit-Btn{
+	width: 100%;
+	height: 42px;
+	border: 0px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: bolder;
+	transition: 0.4s;
+	background-color: #c9453b;
+	color: #fff;
+}
+.Submit-Btn:hover{
+	background-color: #c9453b;
+	color: #fff;
+	
+}
+.dont-have-account,
+.already-have-account{
+	font-family: 'Nunito Sans', sans-serif;
+	letter-spacing: 0.3px;
+	font-size: 14px;
+	color: #c9453b;
+}
+.dont-have-account a,
+.already-have-account a{
+	font-family: 'Nunito Sans', sans-serif;
+	font-style: italic !important;
+	text-decoration: none;
+	color: #002b27;
+	font-weight: bold;
+	transition: 0.4s;
+}
+.dont-have-account a:hover,
+.already-have-account a:hover{
+	color: #008d7f;
+}
+
+#RegistrationFrom,
+#ForgotPasswordForm{
+	display: none;
+}
+.error-input{
+	border: 1px solid #f61414;
+}
+.error-message{
+	font-size: 11px; 
+	font-weight: bold; 
+	color: #f61414;
+	text-align: left; 
+	margin: 0px; 
+	padding: 0px; 
+	margin-top: 2px; 
+}
+
+
+
+// FOOTER
+.footer {
+    background-color: rgba(38, 148, 153, 0.04);
+    padding: 78px 0 70px;
+    text-align: center;
+  }
+  .footer__inner {
+    display: flex;
+  }
+  .footer__contacts {
+    flex-basis: 187px;
+    margin-right: 107px;
+  }
+  .logo__footer {
+    margin-bottom: 40px;
+    width: 250px;
+  }
+  .foooter__contacts__title {
+    margin-bottom: 10px;
+  }
+  .footer__social {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    a{
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .footer___social__link + .footer___social__link {
+    margin-left: 27px;
+  }
+  .footer__list {
+    width: 74px;
+    margin-right: 121px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+  }
+  .footer__list__item {
+    margin-bottom: 20px;
+  }
+  .footer__info {
+    width: 158px;
+    margin-right: 153px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+  }
+  .footer__info__item {
+    margin-bottom: 20px;
+  }
+  .footer__form__title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+    margin-bottom: 42px;
+  }
+  .ff{
+    display: flex;
+  }
+  .footer__input {
+    margin-right: 35px;
+    padding: 0 20px;
+    width: 195px;
+    height: 44px;
+    color: #000;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+  }
+  .footer__input::placeholder {
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+  }
+  .form__button {
+    background-color: #c9453b;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+  }
+  .menu__btn {
+    display: none;
+  }
