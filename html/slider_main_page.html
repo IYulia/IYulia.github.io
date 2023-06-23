@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="/style_css/main_page_style.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+   .offers{
+      position: relative;
+      height: 100%;
+    }
+
+    .offers {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="offers__slider__item swiper-slide">
+        <img
+          class="offers__slider__img"
+          src="/images/slider-3.jpg"
+          alt=""
+        />
+        <h3 class="offers__slider__title">Dizin</h3>
+        <ul class="slider__list">
+          <li class="slider__list__item-bg">
+            Iran
+            <span>4.6</span>
+          </li>
+          <li class="slider__list__item-day">5 Day 6 Nights</li>
+          <li class="slider__list__item-price"><b>550/</b>$person</li>
+        </ul>
+      </div></div>
+      <div class="swiper-slide">  <div class="offers__slider__item swiper-slide">
+        <img
+          class="offers__slider__img"
+          src="/images/slider-4.jpg"
+          alt=""
+        />
+        <h3 class="offers__slider__title">Sajek Valley</h3>
+        <ul class="slider__list">
+          <li class="slider__list__item-bg">
+            Bangladesh
+            <span>4.7</span>
+          </li>
+          <li class="slider__list__item-day">3 Day 4 Nights</li>
+          <li class="slider__list__item-price"><b>$400/</b>person</li>
+        </ul>
+      </div></div>
+      <div class="swiper-slide">          <div class="offers__slider__item swiper-slide">
+        <img
+          class="offers__slider__img"
+          src="/images/slider-5.jpg"
+          alt=""
+        />
+        <h3 class="offers__slider__title">Osaka Castle</h3>
+        <ul class="slider__list">
+          <li class="slider__list__item-bg">
+            Japan
+            <span>4.7</span>
+          </li>
+          <li class="slider__list__item-day">4 Day 5 Nights</li>
+          <li class="slider__list__item-price"><b>$700/</b>person</li>
+        </ul>
+      </div></div>
+      <div class="swiper-slide">          <div class="offers__slider__item swiper-slide">
+        <img
+          class="offers__slider__img"
+          src="/images/slider-1.jpg"
+          alt=""
+        />
+        <h3 class="offers__slider__title">Statue of Liberty.</h3>
+        <ul class="slider__list">
+          <li class="slider__list__item-bg">
+            New York
+            <span>4.8</span>
+          </li>
+          <li class="slider__list__item-day">4 Day 5 Nights</li>
+          <li class="slider__list__item-price"><b>$450/</b>person</li>
+        </ul>
+      </div></div>
+      <div class="swiper-slide">          <div class="offers__slider__item swiper-slide">
+        <img
+          class="offers__slider__img"
+          src="/images/slider-2.jpg"
+          alt=""
+        />
+        <h3 class="offers__slider__title">The Great Wall</h3>
+        <ul class="slider__list">
+          <li class="slider__list__item-bg">
+            China
+            <span>4.9</span>
+          </li>
+          <li class="slider__list__item-day">7 Day 8 Nights</li>
+          <li class="slider__list__item-price"><b>$850/</b>person</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      });
+    </script>
+</body>
+</html>

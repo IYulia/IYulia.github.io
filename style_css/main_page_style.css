@@ -609,8 +609,8 @@ body {
 }
 @media (max-width: 580px) {
   .footer__contacts,
-.footer__list,
-.footer__info {
+  .footer__list,
+  .footer__info {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -670,7 +670,7 @@ body {
     display: block;
   }
   .menu__btn span::after,
-.menu__btn span::before {
+  .menu__btn span::before {
     content: "";
     position: absolute;
     width: 100%;

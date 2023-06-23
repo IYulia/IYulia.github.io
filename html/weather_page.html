@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link rel="stylesheet" href="/style_css/weather_page_style.css">
+    <title>Weather</title>
 </head>
 <body>
     <header class="header" style="background-image: url(/images/header__bg.jpg);">
@@ -29,7 +31,13 @@
     </header>
 <!--  -->
 <section class="weather">
-
+  <h1>
+    Enter the name of the country
+  </h1>
+  <div class="weather-input">
+    <input id="country" type="text">
+    <button onclick="searchWeather()">Search</button>
+  </div>
 </section>
 <!--  -->
 <footer class="footer">
