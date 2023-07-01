@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" href="/style_css/weather_page_style.css">
-    <title>Weather</title>
+    <link rel="stylesheet" href="/style_css/location_page_style.css">
+    <title>Location</title>
 </head>
 <body>
     <header class="header" style="background-image: url(/images/header__bg.jpg);">
@@ -19,8 +19,8 @@
               </button>
               <ul class="menu__list">
                 <li class="menu__list__item"><a class="menu__list__link" href="/html/main_page.html">Home</a></li>
-                <li class="menu__list__item"><a class="menu__list__link" href="#">Weather</a></li>
-                <li class="menu__list__item"><a class="menu__list__link" href="/html/location_page.html">Location</a></li>
+                <li class="menu__list__item"><a class="menu__list__link" href="/html/weather_page.html">Weather</a></li>
+                <li class="menu__list__item"><a class="menu__list__link" href="#">Location</a></li>
                 <li class="menu__list__item"><a class="menu__list__link" href="#">About</a></li>
                 <li class="menu__list__item"><a class="menu__list__link" href="#">Contact</a></li>
               </ul>
@@ -30,24 +30,19 @@
         </div>
     </header>
 <!--  -->
-<section class="weather">
-  <h1>
-    Enter the name of the country
-  </h1>
-  <div class="weather-input">
-    <input id="country" type="text">
-    <button onclick="searchWeather()">Search</button>
+<section class="location">
+  <h1 class = "title">Wikipedia API</h1>
+  <div class = "randQuote">
+    <a class = "randomWiki" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click me for a random Wiki article</a>
   </div>
-  <h1 id="weatherTitel">
-      
-  </h1>
-  <div class="wweather-info">
-
-    <div id="weather-info">
-    </div>
-    <div id="weather-info2">
-    </div>
-  </div>
+    <form class = "callMe">
+      <input id="inputValue" type="text" name="search" placeholder="Search wiki..."><button class = "btn">Click</button>
+  </form>
+   <p class = "returning">Return to starting page<i class="fa fa-arrow-right" aria-hidden="true"></i></p> 
+  <ul id = "newStuff">
+    <li class = "separator">
+    </li>
+  </ul>
 </section>
 <!--  -->
 <footer class="footer">
@@ -88,6 +83,6 @@
     </div>
   </footer>
   <!-- SCRIPTS -->
-  <script src="/scripts/weather_page_script.js"></script>
+  <script src="/scripts/location_page_script.js"></script>
 </body>
 </html>

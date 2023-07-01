@@ -204,66 +204,111 @@ body {
   background-color: #c9453b;
   border-radius: 5px;
 }
-// SECTION
 
-.weather{
-  background-color:  rgba(175, 210, 241, 0.572);
-  padding-top: 50px;
+
+// 
+.location{
+    border: solid black 1px;
     height: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1{
-      font-weight: 500;
-      font-size: 20px;
-      padding-bottom: 20px;
-    }
 }
-.weather-input{
-  display: flex;
-  input{
-    border: #c9453b solid 1.5px;
-    display: flex;
-    padding-left: 20px;
-    height: 45px;
-    width: 250px;
-    border-radius: 20px 0 0 20px;
+
+.title{
+    text-align:center;
+    padding-top: 20px;
+    color:grey;
   }
-  button{
-    border-radius: 0 20px 20px 0;
-    width: 100px;
-    border: none;
+  
+  .returning {
+    text-align:center;
+    padding:10px;
+    color:#F96203;
+    text-shadow: 2px 2px black;
+    cursor: pointer; cursor: hand;
+    margin:auto;
+    max-width:15%;
+  }
+  
+  .randQuote{
+    text-align:center;
+    padding:15px 0px 20px 0px;
+    width:30%;
+    margin:auto;
+    font-size:18px;
+  }
+  
+  .randQuote > a:hover{
+    color:#3EAAF6;
+    text-shadow:3px 3px black;
+  }
+  
+  .randQuote > a {
+    text-decoration:none;
+  }
+  
+  .callMe {
+    text-align:center;
+    width:50%;
+    margin:auto;
+    padding-left:3%;
+  }
+  
+  .btn{
+    width: 50px;
+    height: 41px;
+    margin-left: 10px;
+    text-align:center;
     background-color: #c9453b;
+    border: none;
+    border-radius: 10px;
     color: white;
   }
-}
-.weatherTitel{
-  color: #454545;
-  text-align: center;
-}
-
-.wweather-info{
-  width: 600px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-#weatherTitel{
-  margin-top: 20px;
-}
-
-#weather-info, #weather-info2 {
-  // border: solid rgb(113, 113, 113) 1px;
-  // border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  height: 280px;
-  padding: 10px;
-  padding-top: 60px;
-}
+  
+  .btn:focus{
+    outline: none !important;
+  }
+  
+  #inputValue {
+    width:30%;
+    margin:auto;
+    border:2px solid #3E65E5;
+    border-radius:4px;
+    font-size:16px;
+    background-color:white;
+    padding: 10px 0px 10px 10px;
+    -webkit-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+  }
+  
+  #inputValue:focus {
+      width: 50%;
+  }
+  
+  #newStuff {
+    list-style-type:none;
+    padding-top:40px;
+    display:block;
+    margin:auto;
+    width:60%;
+  }
+  
+  .titles {
+    text-align:left;
+    color:#AF856D;
+    padding-left:10px;
+  }
+  
+  .snippets {
+    text-align:left;
+    padding-left:10px;
+    padding-bottom:20px;
+    color:#6DAFA3;
+  }
+  
+  .titles > a{
+    text-decoration:none;
+    text-align:left;
+    color:#AF856D;
+  }
 
 
 // FOOTER
@@ -365,6 +410,7 @@ body {
   .menu__btn {
     display: none;
   }
+
 
 
 
@@ -571,4 +617,3 @@ body {
       U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
       U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
-  
