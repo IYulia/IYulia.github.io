@@ -88,3 +88,9 @@ function getSunriseSunsetTime(timestamp) {
     const timeString = date.toLocaleTimeString().substr(0, 8);
     return timeString;
 }
+
+function getRandom(number){
+    let random = Math.floor(Math.random() * 10) + 1
+    let randomNumber = number + random
+    return randomNumber
+}
