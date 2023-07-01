@@ -243,9 +243,10 @@ body {
 }
 
 .wweather-info{
-  width: 600px;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -253,7 +254,7 @@ body {
   margin-top: 20px;
 }
 
-#weather-info, #weather-info2 {
+#weather-info, #weather-info2, #weather-info3, #weather-info4, #weather-info5{
   // border: solid rgb(113, 113, 113) 1px;
   // border-radius: 20px;
   display: flex;
