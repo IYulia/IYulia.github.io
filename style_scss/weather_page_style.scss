@@ -592,7 +592,7 @@ main {
   background: #fff;
   border: 1px solid #dadad9;
   border-radius: 10px;
-  font-family: "Zilla Slab", serif;
+  font-family: "Gelasio", serif;
   color: #48484a;
 }
 
@@ -603,7 +603,7 @@ input {
   padding: 6px 10px;
   border: 1px solid #dadad9;
   border-radius: 5px;
-  font-family: "Assistant", sans-serif;
+  font-family: "Gelasio", serif;
 }
 
 input:focus {
@@ -620,7 +620,7 @@ button {
 }
 
 .search-btn {
-  background: #a0c1d1;
+  background-color: #c9453b;
   border-radius: 5px;
   width: 100px;
 }
@@ -697,6 +697,9 @@ button {
   opacity: 0.7;
 }
 
+#city{
+  color: #c9453b;
+}
 .main-temp .active {
   color: #48484a;
   cursor: default;
@@ -710,7 +713,7 @@ button {
   display: block;
   margin: 5px 10px 0;
   color: #48484a;
-  font-family: "Zilla Slab", serif;
+  font-family: "Gelasio", serif;
 }
 section{
   display: flex;

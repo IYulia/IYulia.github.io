@@ -121,10 +121,10 @@ a {
 }
 .title {
   font-weight: 500;
-  font-size: 43px;
+  font-size: 33px;
   line-height: 140%;
   text-align: center;
-  font-family: "Gelasio", serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
 }
 .container {
@@ -185,7 +185,7 @@ body {
   font-weight: 700;
   font-size: 65px;
   line-height: 120%;
-  font-family: "Gelasio", serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 30px;
   max-width: 804px;
 }
@@ -208,21 +208,20 @@ body {
 
 // 
 .location{
-    border: solid black 1px;
-    height: 700px;
+  min-height: 400px;
+    height: 100%;
 }
 
 .title{
     text-align:center;
     padding-top: 20px;
-    color:grey;
+    color:#c9453b;
   }
   
   .returning {
     text-align:center;
     padding:10px;
-    color:#F96203;
-    text-shadow: 2px 2px black;
+    color:#c9453b;
     cursor: pointer; cursor: hand;
     margin:auto;
     max-width:15%;
@@ -250,6 +249,7 @@ body {
     width:50%;
     margin:auto;
     padding-left:3%;
+    margin-top: 30px;
   }
   
   .btn{
@@ -293,7 +293,7 @@ body {
   
   .titles {
     text-align:left;
-    color:#AF856D;
+    color:#c9453b;
     padding-left:10px;
   }
   
@@ -301,13 +301,13 @@ body {
     text-align:left;
     padding-left:10px;
     padding-bottom:20px;
-    color:#6DAFA3;
+    color:#292929;
   }
   
   .titles > a{
     text-decoration:none;
     text-align:left;
-    color:#AF856D;
+    color:#c9453b;
   }
 
 
