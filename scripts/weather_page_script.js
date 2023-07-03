@@ -1,183 +1,158 @@
-async function searchWeather() {
-    const countryInput = document.getElementById('country');
-    const country = countryInput.value;
-
-    if (!country) {
-        console.log('Please enter a country.');
-        return;
+function formatDate(date) {
+    let dayIndex = date.getDay();
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    let day = days[dayIndex];
+  
+    let hours = date.getHours();
+    if (hours < 10) {
+      hours = `0${hours}`;
     }
-
-    const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${country}&limit=1&appid=ad0e5d911d6ca005bd9012bcc9c8a180`;
-
-    try {
-        const geoResponse = await fetch(geoUrl);
-        const geoData = await geoResponse.json();
-
-        if (geoData.length === 0) {
-            console.log('No results found for the specified country.');
-            return;
-        }
-
-        const { lat, lon } = geoData[0];
-        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=ad0e5d911d6ca005bd9012bcc9c8a180&lang=ua`;
-
-        const weatherResponse = await fetch(weatherUrl);
-        const weatherData = await weatherResponse.json();
-        country.value = " "
-        createWeather(country, weatherData);
-
-    } catch (error) {
-        console.log('An error occurred while fetching weather data:', error);
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
     }
-}
-
-function createWeather(country, weatherData) {
-
-    const weather = weatherData.weather[0];
-    const divWeatherInfo = document.getElementById('weather-info');
-    let weatherDescription = weather.description;
-    let temp = Math.floor(weatherData.main.temp);
-    let sunrise = weatherData.sys.sunrise;
-    let sunset = weatherData.sys.sunset;
-    let wind = weatherData.wind.speed;
-
-    let sunriseTime = getSunriseSunsetTime(sunrise);
-    let sunsetTime = getSunriseSunsetTime(sunset);
-    const weatherTitel = document.getElementById('weatherTitel');
-    weatherTitel.innerHTML = country;
-
-    const html = `
-                  <img class="weatherImg" src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="">
-                  <p class="weatherDescription">${weatherDescription}</p>
-                  <h2 class="weatherTemp">${temp}&#8451;</h2>
-                  <p class="sunriseTime">Sunrise: ${sunriseTime}</p>
-                  <p class="sunsetTime">Sunset: ${sunsetTime}</p>
-                  <p class="windSpeed">Wind Speed: ${wind} m/s</p>`;
-
-    divWeatherInfo.innerHTML = html;
-
-    divWeatherInfo.style.borderWidth = '1px';
-    divWeatherInfo.style.borderStyle = 'solid';
-    divWeatherInfo.style.borderColor = 'rgb(113, 113, 113)';
-    divWeatherInfo.style.borderRadius = "20px"
-
-    // 2
-    const divWeatherInfo2 = document.getElementById("weather-info2")
-    let temp2 = getRandom(temp);
-    let wind2 = get_Random_Wind(wind)
-
-   sunriseTime = getSunriseSunsetTime(sunrise - 80);
-   sunsetTime = getSunriseSunsetTime(sunset + 80);
-
-    const html2 = `
-                  <img class="weatherImg" src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="">
-                  <p class="weatherDescription">${weatherDescription}</p>
-                  <h2 class="weatherTemp">${temp2}&#8451;</h2>
-                  <p class="sunriseTime">Sunrise: ${sunriseTime}</p>
-                  <p class="sunsetTime">Sunset: ${sunsetTime}</p>
-                  <p class="windSpeed">Wind Speed: ${wind2} m/s</p>`;
-
-    divWeatherInfo2.innerHTML = html2;
-
-    divWeatherInfo2.style.borderWidth = '1px';
-    divWeatherInfo2.style.borderStyle = 'solid';
-    divWeatherInfo2.style.borderColor = 'rgb(113, 113, 113)';
-    divWeatherInfo2.style.borderRadius = "20px"
-    
-    // 3
-    const divWeatherInfo3 = document.getElementById("weather-info3")
-    let temp3 = get_Random(temp2);
-    let wind3 = get__Random_Wind(wind2)
-
-    sunriseTime = getSunriseSunsetTime(sunrise - 70);
-    sunsetTime = getSunriseSunsetTime(sunset + 70);
-
-    const html3 = `
-                  <img class="weatherImg" src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="">
-                  <p class="weatherDescription">${weatherDescription}</p>
-                  <h2 class="weatherTemp">${temp3}&#8451;</h2>
-                  <p class="sunriseTime">Sunrise: ${sunriseTime}</p>
-                  <p class="sunsetTime">Sunset: ${sunsetTime}</p>
-                  <p class="windSpeed">Wind Speed: ${wind3} m/s</p>`;
-
-    divWeatherInfo3.innerHTML = html3;
-
-    divWeatherInfo3.style.borderWidth = '1px';
-    divWeatherInfo3.style.borderStyle = 'solid';
-    divWeatherInfo3.style.borderColor = 'rgb(113, 113, 113)';
-    divWeatherInfo3.style.borderRadius = "20px"
-   // 4
-   const divWeatherInfo4 = document.getElementById("weather-info4")
-   let temp4 = getRandom(temp3);
-   let wind4 = get_Random_Wind(wind3)
-
-   sunriseTime = getSunriseSunsetTime(sunrise - 60);
-   sunsetTime = getSunriseSunsetTime(sunset + 60);
-
-   const html4 = `
-                 <img class="weatherImg" src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="">
-                 <p class="weatherDescription">${weatherDescription}</p>
-                 <h2 class="weatherTemp">${temp4}&#8451;</h2>
-                 <p class="sunriseTime">Sunrise: ${sunriseTime}</p>
-                 <p class="sunsetTime">Sunset: ${sunsetTime}</p>
-                 <p class="windSpeed">Wind Speed: ${wind4} m/s</p>`;
-
-   divWeatherInfo4.innerHTML = html4;
-
-   divWeatherInfo4.style.borderWidth = '1px';
-   divWeatherInfo4.style.borderStyle = 'solid';
-   divWeatherInfo4.style.borderColor = 'rgb(113, 113, 113)';
-   divWeatherInfo4.style.borderRadius = "20px"
-   
-   // 5
-   const divWeatherInfo5 = document.getElementById("weather-info5")
-   let temp5 = get_Random(temp4);
-   let wind5 = get__Random_Wind(wind4)
-
-   sunriseTime = getSunriseSunsetTime(sunrise - 50);
-   sunsetTime = getSunriseSunsetTime(sunset + 50);
-
-   const html5 = `
-                 <img class="weatherImg" src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="">
-                 <p class="weatherDescription">${weatherDescription}</p>
-                 <h2 class="weatherTemp">${temp5}&#8451;</h2>
-                 <p class="sunriseTime">Sunrise: ${sunriseTime}</p>
-                 <p class="sunsetTime">Sunset: ${sunsetTime}</p>
-                 <p class="windSpeed">Wind Speed: ${wind5} m/s</p>`;
-
-   divWeatherInfo5.innerHTML = html5;
-
-   divWeatherInfo5.style.borderWidth = '1px';
-   divWeatherInfo5.style.borderStyle = 'solid';
-   divWeatherInfo5.style.borderColor = 'rgb(113, 113, 113)';
-   divWeatherInfo5.style.borderRadius = "20px"
-}
-
-function getSunriseSunsetTime(timestamp) {
-    const totalSeconds = timestamp;
-    const date = new Date(totalSeconds * 1000);
-    const timeString = date.toLocaleTimeString().substr(0, 8);
-    return timeString;
-}
-
-function getRandom(number){
-    let random = Math.floor(Math.random() * 10) + 1
-    let randomNumber = number + random
-    return randomNumber
-}
-function get_Random(number){
-    let random = Math.floor(Math.random() * 10) + 1
-    let randomNumber = number - random
-    return randomNumber
-}
-
-function get_Random_Wind(number){
-    let random = Math.floor(Math.random() * 1) + 1
-    let randomNumber = number + random
-    return randomNumber
-}
-function get__Random_Wind(number){
-    let random = Math.floor(Math.random() * 1) + 1
-    let randomNumber = number - random
-    return randomNumber
-}
+  
+    return `${day}, ${hours}:${minutes}`;
+  }
+  
+  function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
+    return days[day];
+  }
+  
+  function displayForecast(response) {
+    let forecast = response.data.daily;
+    let forecastElement = document.querySelector("#forecast");
+  
+    let forecastHTML = `<div class="row">`;
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 5) {
+        forecastHTML =
+          forecastHTML +
+          `
+        <div class="col">
+          <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+            <img
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              width="42"
+            />
+            <div class="weather-forecast-temperatures">
+              <span>${Math.round(forecastDay.temp.max)}°</span>
+              <span class="weather-forecast-temperature-min">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
+            </div>
+          </div>
+      `;
+      }
+    });
+  
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  }
+  
+  function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey = "5774896606a665a971e1d85a7e44770f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+  }
+  
+  function displayWeatherCondition(response) {
+    let temperatureElement = document.querySelector("#temperature");
+    let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind");
+    let iconElement = document.querySelector("#icon");
+  
+    celsiusTemperature = response.data.main.temp;
+  
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    cityElement.innerHTML = response.data.name;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    humidityElement.innerHTML = response.data.main.humidity;
+    windElement.innerHTML = Math.round(response.data.wind.speed);
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+  
+    getForecast(response.data.coord);
+  }
+  
+  function searchCity(city) {
+    let apiKey = "5774896606a665a971e1d85a7e44770f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeatherCondition);
+  }
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    let city = document.querySelector("#search-input").value;
+    searchCity(city);
+  }
+  
+  function searchLocation(position) {
+    let apiKey = "5774896606a665a971e1d85a7e44770f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  
+    axios.get(apiUrl).then(displayWeatherCondition);
+  }
+  
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+  
+  function showFahrenheitTemperature(event) {
+    event.preventDefault();
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  }
+  
+  function showCelsiusTemperature(event) {
+    event.preventDefault();
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  }
+  
+  let dateElement = document.querySelector("#date");
+  let now = new Date();
+  dateElement.innerHTML = formatDate(now);
+  
+  let searchForm = document.querySelector("#search-form");
+  searchForm.addEventListener("submit", handleSubmit);
+  
+  let currentLocationButton = document.querySelector("#current-location-button");
+  currentLocationButton.addEventListener("click", getCurrentLocation);
+  
+  let celsuisTemperature = null;
+  
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+  
+  let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.addEventListener("click", showCelsiusTemperature);
+  
+  searchCity("Kyiv");
+  

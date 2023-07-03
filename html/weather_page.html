@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" href="/style_css/weather_page_style.css">
-    <title>Weather</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style_css/weather_page_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather </title>
+  </head>
+
+  <body>
     <header class="header" style="background-image: url(/images/header__bg.jpg);">
         <div class="header__top_ff">
           <div class="header__top">
@@ -29,74 +42,103 @@
           </div>
         </div>
     </header>
-<!--  -->
-<section class="weather">
-  <h1>
-    Enter the name of the country
-  </h1>
-  <div class="weather-input">
-    <input id="country" type="text">
-    <button onclick="searchWeather()">Search</button>
-  </div>
-  <h1 id="weatherTitel">
-      
-  </h1>
-  <div class="wweather-info">
-
-    <div id="weather-info">
-    </div>
-    <div id="weather-info2">
-    </div>
-    <div id="weather-info3">
-
-    </div>
-    <div id="weather-info4">
-      
-    </div>
-    <div id="weather-info5">
-      
-    </div>
-  </div>
-</section>
-<!--  -->
-<footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__contacts">
-          <img class="logo__footer" src="/images/Black_logo.svg" alt="">
-          <h4 class="foooter__contacts__title">Contact us</h4>
-          <a class="footer__contactl__email" href="mailto:weatherine@gmail.com">weatherine@gmail.com</a>
-          <div class="footer__social">
-            <a class="footer___social__link" href=""><img src="/images/facebook-app-symbol.png" alt=""></a>
-            <a class="footer___social__link" href=""><img src="/images/instagram.png" alt=""></a>
-            <a class="footer___social__link" href=""><img src="/images/twitter.png" alt=""></a>
-            <a class="footer___social__link" href=""><img src="/images/telegram.png" alt=""></a>
+    <!--  -->
+    <section>
+      <div class="container">
+          <div class="main-wrapper">
+            <main>
+              <form id="search-form">
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="search"
+                      id="search-input"
+                      placeholder="Enter a city..."
+                    />
+                  </div>
+                  <div class="col-2">
+                    <button class="search-btn">Search</button>
+                  </div>
+                  <div class="col-1">
+                    <button class="current-btn" id="current-location-button">
+                      📍
+                    </button>
+                  </div>
+                </div>
+              </form>
+    
+              <h1 class="location" id="city"></h1>
+              <h2 class="date" id="date"></h2>
+    
+              <div class="row">
+                <div class="col-4">
+                  <img src="" alt="" class="main-img" id="icon" />
+                  <p id="description"></p>
+                </div>
+    
+                <div class="col-4">
+                  <div class="main-temp">
+                    <span id="temperature"></span>
+                    <small>
+                      <a href="#" id="celsius-link" class="active">°C</a>
+                      |
+                      <a href="#" id="fahrenheit-link">°F</a>
+                    </small>
+                  </div>
+                </div>
+    
+                <div class="col-4">
+                  <p class="details">
+                    Humidity: <strong><span id="humidity"></span>%</strong> <br />
+                    Wind: <strong><span id="wind"></span> km/h</strong> <br />
+                  </p>
+                </div>
+              </div>
+    
+              <div class="weather-forecast" id="forecast"></div>
+            </main>
           </div>
         </div>
-        <ul class="footer__list">
-          <li class="footer__list__item"><a class="footer__list__link" href="#">Services</a></li>
-          <li class="footer__list__item"><a class="footer__list__link" href="#">About</a></li>
-          <li class="footer__list__item"><a class="footer__list__link" href="#">Our story</a></li>
-          <li class="footer__list__item"><a class="footer__list__link" href="#">Benefits</a></li>
-          <li class="footer__list__item"><a class="footer__list__link" href="#">Branding</a></li>
-        </ul>
-        <ul class="footer__info">
-          <li class="footer__info__item"><a class="footer__info__link" href="#">Legal</a></li>
-          <li class="footer__info__item"><a class="footer__info__link" href="#">Terms &amp; Conditions</a></li>
-          <li class="footer__info__item"><a class="footer__info__link" href="#">Privecy Policy</a></li>
-          <li class="footer__info__item"><a class="footer__info__link" href="#">Terms of use</a></li>
-        </ul>
-        <form class="footer__form">
-          <h4 class="footer__form__title"><b>SUBSCRIBE NOW</b></h4>
-          <div class="ff">
-            <input class="footer__input" type="text" placeholder="Email">
-            <button class="form__button">Send</button>
+  </section>
+    <!--  -->
+    <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__contacts">
+              <img class="logo__footer" src="/images/Black_logo.svg" alt="">
+              <h4 class="foooter__contacts__title">Contact us</h4>
+              <a class="footer__contactl__email" href="mailto:weatherine@gmail.com">weatherine@gmail.com</a>
+              <div class="footer__social">
+                <a class="footer___social__link" href=""><img src="/images/facebook-app-symbol.png" alt=""></a>
+                <a class="footer___social__link" href=""><img src="/images/instagram.png" alt=""></a>
+                <a class="footer___social__link" href=""><img src="/images/twitter.png" alt=""></a>
+                <a class="footer___social__link" href=""><img src="/images/telegram.png" alt=""></a>
+              </div>
+            </div>
+            <ul class="footer__list">
+              <li class="footer__list__item"><a class="footer__list__link" href="#">Services</a></li>
+              <li class="footer__list__item"><a class="footer__list__link" href="#">About</a></li>
+              <li class="footer__list__item"><a class="footer__list__link" href="#">Our story</a></li>
+              <li class="footer__list__item"><a class="footer__list__link" href="#">Benefits</a></li>
+              <li class="footer__list__item"><a class="footer__list__link" href="#">Branding</a></li>
+            </ul>
+            <ul class="footer__info">
+              <li class="footer__info__item"><a class="footer__info__link" href="#">Legal</a></li>
+              <li class="footer__info__item"><a class="footer__info__link" href="#">Terms &amp; Conditions</a></li>
+              <li class="footer__info__item"><a class="footer__info__link" href="#">Privecy Policy</a></li>
+              <li class="footer__info__item"><a class="footer__info__link" href="#">Terms of use</a></li>
+            </ul>
+            <form class="footer__form">
+              <h4 class="footer__form__title"><b>SUBSCRIBE NOW</b></h4>
+              <div class="ff">
+                <input class="footer__input" type="text" placeholder="Email">
+                <button class="form__button">Send</button>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </div>
-  </footer>
-  <!-- SCRIPTS -->
-  <script src="/scripts/weather_page_script.js"></script>
-</body>
+        </div>
+      </footer>
+      <!-- SCRIPT -->
+    <script src="/scripts/weather_page_script.js"></script>
+  </body>
 </html>
