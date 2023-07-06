@@ -423,6 +423,10 @@ body {
   display: none;
 }
 
+#celsius-link, #fahrenheit-link {
+  color: #000 !important;
+}
+
 @font-face {
   font-family: "Gelasio";
   font-style: normal;

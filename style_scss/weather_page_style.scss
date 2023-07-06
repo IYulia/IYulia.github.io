@@ -418,6 +418,9 @@ body {
 .menu__btn {
   display: none;
 }
+#celsius-link, #fahrenheit-link{
+  color: #000 !important;
+}
 
 @font-face {
   font-family: "Gelasio";
