@@ -1,7 +1,3 @@
-  //API
-  // api = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&prop=extracts&exintro&explaintext&exlimit=max&gsrsearch=";
-
-
   $(document).ready(function(){
 
     var backMe = $(".returning").hide();

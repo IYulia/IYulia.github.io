@@ -1,3 +1,79 @@
+function setCookie(name, value, hours) {
+  var date = new Date();
+  date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+  var expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+  var cookieName = name + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var cookieArray = decodedCookie.split(';');
+  for (var i = 0; i < cookieArray.length; i++) {
+    var cookie = cookieArray[i];
+    while (cookie.charAt(0) == ' ') {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(cookieName) == 0) {
+      return cookie.substring(cookieName.length, cookie.length);
+    }
+  }
+  return "";
+}
+
+function ShowLoginForm(){
+  SetTitle("Login");
+  ShowHideForm("LoginFrom","Show");
+  ShowHideForm("RegistrationFrom","Hide");
+  ShowHideForm("ForgotPasswordForm","Hide");
+  ActiveInactiveBtn("ShowLoginBtn","Active");
+  ActiveInactiveBtn("ShowRegistrationBtn","Inactive");
+  ShowHideFromSwitchBtn("Show");
+}
+
+function ShowRegistrationForm(){
+  debugger;
+  SetTitle("Registration");
+  ShowHideForm("RegistrationFrom","Show");
+  ShowHideForm("LoginFrom","Hide");
+  ShowHideForm("ForgotPasswordForm","Hide");
+  ActiveInactiveBtn("ShowLoginBtn","Inactive");
+  ActiveInactiveBtn("ShowRegistrationBtn","Active");
+  ShowHideFromSwitchBtn("Show");
+}
+
+function SaveFormDataToCookie() {
+  var formData = {
+    loginForm: {
+      email: document.getElementById('LoginEmail').value,
+      password: document.getElementById('LoginPassword').value
+    },
+    registrationForm: {
+      name: document.getElementById('RegiName').value,
+      email: document.getElementById('RegiEmailAddres').value,
+      password: document.getElementById('RegiPassword').value
+    }
+  };
+  setCookie("formData", JSON.stringify(formData), 3); 
+}
+
+
+function LoadFormDataFromCookie() {
+  var cookieData = getCookie("formData");
+  if (cookieData !== "") {
+    var formData = JSON.parse(cookieData);
+    document.getElementById('LoginEmail').value = formData.loginForm.email;
+    document.getElementById('LoginPassword').value = formData.loginForm.password;
+    document.getElementById('RegiName').value = formData.registrationForm.name;
+    document.getElementById('RegiEmailAddres').value = formData.registrationForm.email;
+    document.getElementById('RegiPassword').value = formData.registrationForm.password;
+  }
+}
+
+window.onload = function() {
+  LoadFormDataFromCookie();
+};
+
 function ShowLoginForm(){
 	
 	SetTitle("Login");
