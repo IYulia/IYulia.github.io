@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap");
+:root {
+  --var--bg-col-black: #000;
+  --var--bg-col-white: #fff;
+  --var--bg-col-red: #c9453b;
+  --var--slider-white: #f5f5f5;
+  --var--menu-color: rgb(255, 255, 255);
+  --var--footer-color: rgba(38, 148, 153, 0.04);
+}
+
+[dark] {
+  --var--bg-col-black: #fff;
+  --var--bg-col-white: #333;
+  --var--slider-white: #555555;
+  --var--menu-color: rgb(58, 58, 58);
+  --var--footer-color: rgba(211, 211, 211, 0.243);
+}
+
 body,
 div,
 span,
@@ -156,8 +173,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--var--bg-col-white);
+  color: var(--var--bg-col-black);
 }
 
 .header {
@@ -244,12 +261,16 @@ body {
   border-radius: 5px;
 }
 
+#them {
+  width: 40px;
+  height: 40px;
+}
+
 .login_form {
   height: 100%;
   margin-top: 20px;
 }
 
-/*font-family: 'Nunito Sans', sans-serif;*/
 * {
   margin: 0px;
   padding: 0px;
@@ -269,7 +290,7 @@ body {
 
 #LoginAndRegistrationForm {
   width: 350px;
-  background: #fff;
+  background: var(--var--bg-col-white);
   margin: 100px auto;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
@@ -318,7 +339,7 @@ body {
 }
 
 #formSwitchBtn .active {
-  color: #fff;
+  color: var(--var--bg-col-white);
   background: #c9453b;
 }
 
@@ -348,10 +369,11 @@ body {
           justify-content: center;
   gap: 90px;
   font-size: 14px;
+  color: var(--var--bg-col-black);
 }
 
 .forgot-pass-remember-me #ForgotPassword {
-  color: #002b27;
+  color: var(--var--bg-col-black);
   font-weight: bold;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -388,12 +410,12 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   background-color: #c9453b;
-  color: #fff;
+  color: var(--var--bg-col-white);
 }
 
 .Submit-Btn:hover {
   background-color: #c9453b;
-  color: #fff;
+  color: var(--var--bg-col-white);
 }
 
 .dont-have-account,
@@ -409,7 +431,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-style: italic !important;
   text-decoration: none;
-  color: #002b27;
+  color: var(--var--bg-col-black);
   font-weight: bold;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -440,7 +462,7 @@ body {
 }
 
 .footer {
-  background-color: rgba(38, 148, 153, 0.04);
+  background-color: var(--var--footer-color);
   padding: 78px 0 70px;
   text-align: center;
 }
@@ -531,10 +553,8 @@ body {
   padding: 0 20px;
   width: 195px;
   height: 44px;
-  color: #000;
-  border: 1px solid #000000;
-  -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+  color: var(--var--bg-col-black);
+  border: 1px solid var(--var--bg-col-black);
   border-radius: 5px;
   font-weight: 400;
   font-size: 16px;
@@ -543,7 +563,7 @@ body {
 }
 
 .footer__input::-webkit-input-placeholder {
-  color: #000;
+  color: var(--var--bg-col-black);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -551,7 +571,7 @@ body {
 }
 
 .footer__input::-moz-placeholder {
-  color: #000;
+  color: var(--var--bg-col-black);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -559,7 +579,7 @@ body {
 }
 
 .footer__input:-ms-input-placeholder {
-  color: #000;
+  color: var(--var--bg-col-black);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -567,7 +587,7 @@ body {
 }
 
 .footer__input::-ms-input-placeholder {
-  color: #000;
+  color: var(--var--bg-col-black);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -575,7 +595,7 @@ body {
 }
 
 .footer__input::placeholder {
-  color: #000;
+  color: var(--var--bg-col-black);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -587,7 +607,7 @@ body {
   padding: 10px 32px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--var--bg-col-white);
 }
 
 .menu__btn {

@@ -1,3 +1,27 @@
+//////////////////
+$bg_col_red: #c9453b;
+$bg_col_white: #fff;
+$bg_col_black: #000;
+$slider_white: #f5f5f5;
+$menu_color: rgb(255, 255, 255);
+$footer_color :  rgba(38, 148, 153, 0.04); 
+
+
+:root {
+  --var--bg-col-black: #000;
+  --var--bg-col-white: #fff;
+  --var--bg-col-red: #c9453b;
+  --var--slider-white: #f5f5f5;
+  --var--menu-color:  rgb(255, 255, 255);;
+  --var--footer-color: rgba(38, 148, 153, 0.04);
+}
+[dark]{
+  --var--bg-col-black: #fff;
+  --var--bg-col-white: #333;
+  --var--slider-white: #555555;
+  --var--menu-color:  rgb(58, 58, 58);;
+  --var--footer-color: rgba(211, 211, 211, 0.243);
+}
 body,
 div,
 span,
@@ -137,15 +161,15 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--var--bg-col-white);
+  color: var(--var--bg-col-black)
 }
 .header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
   height: 100vh;
-  color: #fff;
+  color: $bg_col_white;
 }
 .header__top {
   max-width: 1160px;
@@ -174,11 +198,11 @@ body {
   margin: 0 25px;
 }
 .menu__list__link:hover {
-  color: #c9453b;
+  color: $bg_col_red;
 }
 .header__top__btn {
   padding: 14px 35px 13px;
-  background-color: #c9453b;
+  background-color: $bg_col_red;
   border-radius: 5px;
 }
 .header__title {
@@ -201,10 +225,16 @@ body {
   font-size: 16px;
   line-height: 150%;
   padding: 18px 46px 17px;
-  background-color: #c9453b;
+  background-color: $bg_col_red;
   border-radius: 5px;
 }
 
+// 
+
+#them{
+  width: 40px;
+  height: 40px;
+}
 
 // SECTION
 
@@ -214,7 +244,7 @@ body {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
-/*font-family: 'Nunito Sans', sans-serif;*/
+
 *{
 	margin: 0px;
 	padding: 0px;
@@ -231,7 +261,7 @@ body {
 
 #LoginAndRegistrationForm{
 	width: 350px;
-	background: #fff;
+	background: var(--var--bg-col-white);
 	margin: 100px auto;
 	border-radius: 10px;
 	box-sizing: border-box;
@@ -247,7 +277,7 @@ body {
 	font-weight: bolder;
 	letter-spacing: 1px;
 	font-size: 25px;
-    color: #c9453b;
+    color: $bg_col_red;
 }
 
 #formSwitchBtn{
@@ -266,18 +296,18 @@ body {
 	cursor: pointer;
 	position: relative;
 	background: transparent;
-	border: 1px solid #c9453b;
+	border: 1px solid $bg_col_red;
 	transition: 0.4s;
 }
 #formSwitchBtn .active{
-	color: #fff;
-	background: #c9453b;
+	color: var(--var--bg-col-white);
+	background: $bg_col_red;
 }
 .input-text{
 	width: 100%;
 	height: 38px;
 	border: 0px;
-	border: 1px solid #c9453b;
+	border: 1px solid $bg_col_red;
 	box-sizing: border-box;
 	padding: 5px;
 	border-radius: 5px;
@@ -294,10 +324,11 @@ body {
 	justify-content: center;
 	gap: 90px;
 	font-size: 14px;
+  color: var(--var--bg-col-black);
 }
 
 .forgot-pass-remember-me #ForgotPassword{
-	color: #002b27;
+	color: var(--var--bg-col-black);
 	font-weight: bold;
 	transition: 0.4s;
 }
@@ -327,12 +358,12 @@ body {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: bolder;
 	transition: 0.4s;
-	background-color: #c9453b;
-	color: #fff;
+	background-color: $bg_col_red;
+	color: var(--var--bg-col-white);
 }
 .Submit-Btn:hover{
-	background-color: #c9453b;
-	color: #fff;
+	background-color: $bg_col_red;
+	color: var(--var--bg-col-white);
 	
 }
 .dont-have-account,
@@ -340,14 +371,14 @@ body {
 	font-family: 'Nunito Sans', sans-serif;
 	letter-spacing: 0.3px;
 	font-size: 14px;
-	color: #c9453b;
+	color: $bg_col_red;
 }
 .dont-have-account a,
 .already-have-account a{
 	font-family: 'Nunito Sans', sans-serif;
 	font-style: italic !important;
 	text-decoration: none;
-	color: #002b27;
+	color: var(--var--bg-col-black);
 	font-weight: bold;
 	transition: 0.4s;
 }
@@ -377,7 +408,7 @@ body {
 
 // FOOTER
 .footer {
-    background-color: rgba(38, 148, 153, 0.04);
+    background-color: var(--var--footer-color);
     padding: 78px 0 70px;
     text-align: center;
   }
@@ -448,9 +479,8 @@ body {
     padding: 0 20px;
     width: 195px;
     height: 44px;
-    color: #000;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+    color: var(--var--bg-col-black);
+    border: 1px solid var(--var--bg-col-black);
     border-radius: 5px;
     font-weight: 400;
     font-size: 16px;
@@ -458,18 +488,18 @@ body {
     letter-spacing: 0.06em;
   }
   .footer__input::placeholder {
-    color: #000;
+    color: var(--var--bg-col-black);
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.06em;
   }
   .form__button {
-    background-color: #c9453b;
+    background-color: $bg_col_red;
     padding: 10px 32px;
     border: none;
     border-radius: 10px;
-    color: white;
+    color: var(--var--bg-col-white);
   }
   .menu__btn {
     display: none;

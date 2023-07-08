@@ -1,3 +1,16 @@
+function addOrRemoveTheme(){
+	const theme = document.getElementById('them')
+	if(theme.className == "theme-light"){
+	  theme.innerHTML = '<img src="/images/sun_.png">'
+	  theme.setAttribute('class', 'theme-dark')
+	  document.body.setAttribute('dark', '')
+	}else{
+	  theme.innerHTML = '<img src="/images/moon (1).png">'
+	  theme.setAttribute('class', 'theme-light')
+	  document.body.removeAttribute('dark')
+	}
+  }
+   
 function setCookie(name, value, hours) {
   var date = new Date();
   date.setTime(date.getTime() + (hours * 60 * 60 * 1000));

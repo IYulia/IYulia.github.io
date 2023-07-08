@@ -1,3 +1,21 @@
+:root {
+  --var--bg-col-black: #000;
+  --var--bg-col-white: #fff;
+  --var--bg-col-red: #c9453b;
+  --var--slider-white: #f5f5f5;
+  --var--menu-color: rgb(255, 255, 255);
+  --var--footer-color: rgba(38, 148, 153, 0.04);
+}
+
+[dark] {
+  --var--bg-col-black: #fff;
+  --var--bg-col-white: #333;
+  --var--bg-col-red: #c9453b;
+  --var--slider-white: #555555;
+  --var--menu-color: rgb(58, 58, 58);
+  --var--footer-color:rgb(119, 119, 119);
+}
+
 body,
 div,
 span,
@@ -132,8 +150,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--var--bg-col-white);
+  color: var(--var--bg-col-black);
 }
 
 .header {
@@ -176,12 +194,12 @@ body {
 }
 
 .menu__list__link:hover {
-  color: #c9453b;
+  color: var(--var--bg-col-red);
 }
 
 .header__top__btn {
   padding: 14px 35px 13px;
-  background-color: #c9453b;
+  background-color: var(--var--bg-col-red);
   border-radius: 5px;
 }
 
@@ -207,8 +225,14 @@ body {
   font-size: 16px;
   line-height: 150%;
   padding: 18px 46px 17px;
-  background-color: #c9453b;
+  background-color: var(--var--bg-col-red);
   border-radius: 5px;
+}
+
+#them {
+  padding-top: 5px;
+  width: 40px;
+  height: 40px;
 }
 
 .location {
@@ -335,7 +359,7 @@ body {
 }
 
 .footer {
-  background-color: rgba(38, 148, 153, 0.04);
+  background-color: var(--var--footer-color);
   padding: 78px 0 70px;
   text-align: center;
 }
@@ -418,8 +442,7 @@ body {
   width: 195px;
   height: 44px;
   color: #000;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--var--bg-col-black);
   border-radius: 5px;
   font-weight: 400;
   font-size: 16px;
@@ -428,7 +451,7 @@ body {
 }
 
 .footer__input::placeholder {
-  color: #000;
+  color: var(--var--bg-col-black);
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -436,11 +459,11 @@ body {
 }
 
 .form__button {
-  background-color: #c9453b;
+  background-color: var(--var--bg-col-red);
   padding: 10px 32px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--var--bg-col-white);
 }
 
 .menu__btn {
@@ -503,7 +526,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: var(--var--slider-white);
   padding: 10px;
   font-weight: bold;
   font-size: 16px;
@@ -645,12 +668,12 @@ body {
     top: 10px;
     padding: 0;
     right: 10px;
-    background-color: #000;
+    background-color: var(--var--bg-col-black);
   }
   .menu__btn span {
     width: 100%;
     height: 4px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--var--menu-color);
     right: 10px;
     border: none;
     display: block;
@@ -661,7 +684,7 @@ body {
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: rgb(255, 254, 254);
+    background-color: var(--var--menu-color);
   }
   .menu__btn span::after {
     top: 0;

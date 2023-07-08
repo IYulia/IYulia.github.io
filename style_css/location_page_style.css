@@ -1,3 +1,20 @@
+:root {
+  --var--bg-col-black: #000;
+  --var--bg-col-white: #fff;
+  --var--bg-col-red: #c9453b;
+  --var--slider-white: #f5f5f5;
+  --var--menu-color: rgb(255, 255, 255);
+  --var--footer-color: rgba(38, 148, 153, 0.04);
+}
+
+[dark] {
+  --var--bg-col-black: #fff;
+  --var--bg-col-white: #333;
+  --var--slider-white: #555555;
+  --var--menu-color: rgb(58, 58, 58);
+  --var--footer-color: rgba(211, 211, 211, 0.243);
+}
+
 body,
 div,
 span,
@@ -155,8 +172,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--var--bg-col-white);
+  color: var(--var--bg-col-black);
 }
 
 .header {
@@ -243,6 +260,11 @@ body {
   border-radius: 5px;
 }
 
+#them {
+  width: 40px;
+  height: 40px;
+}
+
 .location {
   min-height: 400px;
   height: 100%;
@@ -274,7 +296,7 @@ body {
 
 .randQuote > a:hover {
   color: #3EAAF6;
-  text-shadow: 3px 3px black;
+  text-shadow: 3px 3px var(--var--bg-col-black);
 }
 
 .randQuote > a {
@@ -297,7 +319,7 @@ body {
   background-color: #c9453b;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--var--bg-col-white);
 }
 
 .btn:focus {
@@ -310,7 +332,7 @@ body {
   border: 2px solid #3E65E5;
   border-radius: 4px;
   font-size: 16px;
-  background-color: white;
+  background-color: var(--var--bg-col-white);
   padding: 10px 0px 10px 10px;
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
@@ -338,7 +360,7 @@ body {
   text-align: left;
   padding-left: 10px;
   padding-bottom: 20px;
-  color: #292929;
+  color: var(--var--bg-col-black);
 }
 
 .titles > a {
@@ -348,7 +370,7 @@ body {
 }
 
 .footer {
-  background-color: rgba(38, 148, 153, 0.04);
+  background-color: var(--var--footer-color);
   padding: 78px 0 70px;
   text-align: center;
 }
@@ -495,7 +517,7 @@ body {
   padding: 10px 32px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--var--bg-col-white);
 }
 
 .menu__btn {
