@@ -186,9 +186,6 @@ body {
 .logo__img{
   width: 190px;
 }
-.header__top_ff{
-  background: linear-gradient(to right, #191e5d5f, #6060605f);
-}
 .menu__list {
   display: flex;
 }
@@ -378,7 +375,7 @@ body {
     margin-left: 27px;
   }
   .footer__list {
-    width: 74px;
+    width: 124px;
     margin-right: 121px;
     font-weight: 500;
     font-size: 16px;
@@ -389,7 +386,7 @@ body {
     margin-bottom: 20px;
   }
   .footer__info {
-    width: 158px;
+    width: 198px;
     margin-right: 153px;
     font-weight: 500;
     font-size: 16px;
@@ -411,18 +408,18 @@ body {
     display: flex;
   }
   .footer__input {
-    margin-right: 35px;
+    margin-right: 20px;
     padding: 0 20px;
     width: 195px;
     height: 44px;
     color: #000;
-    border: 1px solid #000000;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--var--bg-col-red);
     border-radius: 5px;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.06em;
+
   }
   .footer__input::placeholder {
     color: #000;

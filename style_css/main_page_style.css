@@ -137,6 +137,7 @@ a {
   text-align: center;
   font-family: "Gelasio", serif;
   margin-bottom: 20px;
+  color: var(--var--bg-col-red);
 }
 
 .container {
@@ -269,6 +270,7 @@ body {
   line-height: 150%;
   font-family: "Gelasio", serif;
   margin-bottom: 10px;
+  color: var(--var--bg-col-red);
 }
 
 .location__item__text {
@@ -321,6 +323,7 @@ body {
 .news__item__img-big {
   margin-right: 32px;
   margin-bottom: 35px;
+  border-radius: 20px;
 }
 
 .news__item__title-big {
@@ -329,6 +332,7 @@ body {
   line-height: 160%;
   font-family: "Gelasio", serif;
   margin-bottom: 10px;
+  color: var(--var--bg-col-red);
 }
 
 .news__item__text-big {
@@ -339,6 +343,7 @@ body {
 .news__item__img {
   margin-bottom: 35px;
   margin-right: 27px;
+  border-radius: 15px;
 }
 
 .news__item__title {
@@ -347,6 +352,7 @@ body {
   line-height: 160%;
   font-family: "Gelasio", serif;
   margin-bottom: 10px;
+  color: var(--var--bg-col-red);
 }
 
 .news__item__text {
@@ -356,6 +362,10 @@ body {
 .news__item {
   display: flex;
   align-items: center;
+}
+
+.news__item__email {
+  color: var(--var--bg-col-red);
 }
 
 .footer {
@@ -398,7 +408,7 @@ body {
 }
 
 .footer__list {
-  width: 74px;
+  width: 124px;
   margin-right: 121px;
   font-weight: 500;
   font-size: 16px;
@@ -411,7 +421,7 @@ body {
 }
 
 .footer__info {
-  width: 158px;
+  width: 198px;
   margin-right: 153px;
   font-weight: 500;
   font-size: 16px;
@@ -437,12 +447,12 @@ body {
 }
 
 .footer__input {
-  margin-right: 35px;
+  margin-right: 20px;
   padding: 0 20px;
   width: 195px;
   height: 44px;
-  color: #000;
-  border: 1px solid var(--var--bg-col-black);
+  color: var(--var--bg-col-red);
+  border: 1.5px solid var(--var--bg-col-red);
   border-radius: 5px;
   font-weight: 400;
   font-size: 16px;
@@ -541,12 +551,14 @@ body {
   font-size: 14px;
 }
 
-.slider__list__item-price b {
+.slider__list__item-price {
   font-weight: bold;
+  font-size: 20px;
+  color: var(--var--bg-col-red);
 }
 
-.slider__list__item-price::after {
-  content: "$person";
+.slider__list__item-price b {
+  font-weight: bold;
 }
 
 @media (max-width: 1200px) {
@@ -556,6 +568,7 @@ body {
   }
   .news__item__img-big {
     width: 100%;
+    border-radius: 20px;
   }
   .news__inner {
     flex-wrap: wrap;
@@ -567,13 +580,16 @@ body {
   }
   .news__item__email {
     display: block;
+    color: var(--var--bg-col-red);
   }
   .news__item__img-big {
     margin-right: 0;
+    border-radius: 20px;
   }
   .news__item__email {
     display: inline-block;
     margin-bottom: 20px;
+    color: var(--var--bg-col-red);
   }
   .news__item {
     flex-wrap: wrap;
