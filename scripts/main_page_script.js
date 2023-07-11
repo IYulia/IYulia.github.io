@@ -61,6 +61,7 @@ var swiper = new Swiper(".mySwiper", {
     }
   });  
 
+// BURGER MENU
   function burgerMenu(selector) {
     let menu = document.querySelector(selector);
     let button = menu.querySelector('.burger-menu_button, .burger-menu_lines');

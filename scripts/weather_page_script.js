@@ -1,4 +1,4 @@
-  //DARK THEME 
+//DARK THEME 
   function addOrRemoveTheme() {
     const theme = document.getElementById('them');
     if (theme.className == "theme-light") {
@@ -27,8 +27,8 @@
       document.body.removeAttribute('dark');
     }
   });
-  
 
+// RESPONS
 function formatDate(date) {
     let dayIndex = date.getDay();
     let days = [

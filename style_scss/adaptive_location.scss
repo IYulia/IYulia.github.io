@@ -1,0 +1,22 @@
+.header{
+    height: 100%;
+}
+.header__top{
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 992px) {
+    .callMe{
+        width: 400px;
+        input{
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 540px){
+    .header {
+      height: 200px;
+    }
+    #inputValue{
+      width: 120px;
+    }
+  }
