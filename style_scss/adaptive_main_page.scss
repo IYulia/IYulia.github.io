@@ -1,0 +1,253 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+      .location__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .news__item__img-big {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .news__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .news__item__text-big {
+    max-width: 100%;
+  }
+  .news__item__email {
+    display: block;
+    color: var(--var--bg-col-red);
+  }
+  .news__item__img-big {
+    margin-right: 0;
+    border-radius: 20px;
+  }
+  .news__item__email {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--var--bg-col-red);
+  }
+  .news__item {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .footer__inner {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer__info {
+    margin-right: 38px;
+  }
+  .footer__list {
+    margin-right: 36px;
+  }
+  .footer__contacts {
+    margin-right: 28px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .header{
+        .container{
+            margin-left: 30px;
+        }
+    }
+    .header__top{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .header__title {
+        font-size: 42px;
+        line-height: 95%;
+      }
+      .header__top {
+        flex-direction: column;
+      }
+      .header__top__btn {
+        display: inline-block;
+      }
+      .menu {
+        margin-bottom: 10px;
+      }
+    //   .header__title{
+    //     margin-left: 30px;
+    //   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .header{
+        .container{
+            padding-bottom: 30px;
+        }
+    }
+    .header__top_ff{
+        background: none;
+    }
+    .header__top{
+        margin-bottom: 150px;
+    }
+    .header__top__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+  .news__item {
+    justify-content: center;
+  }
+  .news__item__list {
+    width: 100%;
+  }
+  .news{
+    margin: 0px 10px;
+  }
+  .footer__form{
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer__contacts,
+  .footer__list,
+  .footer__info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .location__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+  .footer__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 540px) {
+  .header__top {
+    margin-bottom: 230px;
+  }
+  .header {
+    height: 90vh;
+  }
+  .header__title {
+    font-size: 26px;
+    line-height: 95%;
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+  .header__text {
+    font-size: 14px;
+    line-height: 134%;
+    margin-bottom: 22px;
+  }
+  .header__btn {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .menu {
+    display: none;
+  }
+  .menu__list {
+    display: block;
+    transform: translateY(-150%);
+    transition: all 0.5s;
+  } 
+  .menu__list__link {
+    display: block;
+    padding: 10px 0;
+  }
+  .menu__btn {
+    display: block;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 10px;
+    padding: 0;
+    right: 10px;
+    background-color: var(--var--bg-col-black);
+  }
+  .menu__btn span {
+    width: 100%;
+    height: 4px;
+    background-color: var(--var--menu-color);
+    right: 10px;
+    border: none;
+    display: block;
+  }
+  .menu__btn span::after,
+  .menu__btn span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--var--menu-color);
+  }
+  .menu__btn span::after {
+    top: 0;
+    left: 0;
+  }
+  .menu__btn span::before {
+    bottom: 0;
+    right: 0;
+  }
+  .location {
+    margin-bottom: 80px;
+    padding-top: 80px;
+  }
+  .location__item__img {
+    margin-bottom: 17px;
+  }
+  .offers {
+    padding-bottom: 80px;
+  }
+  .news {
+    padding-bottom: 80px;
+  }
+  .burger-menu_button{
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .title {
+    font-size: 37px;
+    line-height: 91%;
+  }
+  .location__text {
+    margin-bottom: 25px;
+  }
+  .location__item__img {
+    width: 100%;
+  }
+  body {
+    font-size: 16px;
+    line-height: 140%;
+  }
+  .footer__form__title {
+    margin-bottom: 10px;
+  }
+  .footer__input {
+    margin-right: 0;
+    width: 175px;
+  }
+  .slider__list__item-bg{
+    width: 120px;
+  }
+  section{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .ff{
+    gap: 20px;
+  }
+}
