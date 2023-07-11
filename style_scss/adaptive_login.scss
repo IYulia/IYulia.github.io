@@ -1,9 +1,3 @@
-.header{
-    height: 100%;
-}
-.header__top{
-    margin-bottom: 50px;
-}
 // BURGER MENU
 .burger-menu_button {
     display: none;
@@ -199,12 +193,6 @@
     .menu {
       margin-bottom: 10px;
     }
-    .callMe{
-        width: 400px;
-        input{
-            width: 50%;
-        }
-    }
 }
 
 /* Small Devices, Tablets */
@@ -347,12 +335,6 @@
 .burger-menu_button{
   display: block;
 }
-.header {
-    height: 200px;
-  }
-  #inputValue{
-    width: 120px;
-  }
 }
 @media (max-width: 400px) {
 .title {
